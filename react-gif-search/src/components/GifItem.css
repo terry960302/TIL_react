@@ -1,0 +1,49 @@
+.card_view {
+  box-shadow: 6px 5px 17px 1px rgba(86, 86, 86, 0.69);
+  border-radius: 8px;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+}
+.image_box > img {
+  object-fit: cover;
+  width: 100%;
+}
+
+.desc {
+  margin-top: 10px;
+  margin-left: 15px;
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+.title {
+  text-align: start;
+  border-color: aqua;
+  border-radius: 12px;
+  border-width: 5px;
+  color: burlywood;
+}
+
+.subtitle {
+  text-align: start;
+  border-color: aqua;
+  border-radius: 12px;
+  border-width: 5px;
+  color: burlywood;
+}
+
+.more_btn {
+  float: right;
+  margin-bottom: 8px;
+  margin-right: 6px;
+}
+
+.more_btn > button {
+  border-radius: 7px;
+  background-color: #f8585b;
+  padding: 6px 14px;
+  border: none;
+  color: white;
+  font-size: 16px;
+}
