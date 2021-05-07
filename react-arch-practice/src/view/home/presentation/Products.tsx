@@ -2,9 +2,13 @@ import React from "react";
 import useProducts from "../../../hook/home/useProducts";
 import Product from "./Product";
 
-function Products() {
-  const { products, loading, error } = useProducts();
+type Props = {
+  products: any[];
+  error: any;
+  loading: boolean;
+};
 
+function Products({ products, loading, error }: Props) {
   if (loading) {
     return <span>loading....</span>;
   }

@@ -1,7 +1,12 @@
 import React from "react";
+import ProductsContainer from "./container/ProductsContainer";
 
 function HomePage() {
-  return <div>home 페이지입니다.</div>;
+  return (
+    <div>
+      <ProductsContainer />
+    </div>
+  );
 }
 
 export default HomePage;
