@@ -1,14 +1,18 @@
 import React from "react";
-import * as StyledTabs from "./Tabs.styled";
+import styled from "styled-components";
 
 function Tabs() {
   return (
     <div>
-      <StyledTabs.TabBtn>탭1</StyledTabs.TabBtn>
-      <StyledTabs.TabBtn>탭2</StyledTabs.TabBtn>
-      <StyledTabs.TabBtn>탭3</StyledTabs.TabBtn>
+      <TabBtn>탭1</TabBtn>
+      <TabBtn>탭2</TabBtn>
+      <TabBtn>탭3</TabBtn>
     </div>
   );
 }
 
 export default Tabs;
+
+export const TabBtn = styled.button`
+  border: none;
+`;

@@ -1,16 +1,19 @@
 import { useQuery } from "@apollo/client";
 import React, { useState } from "react";
-import { CREATE } from "../../apollo/home/query";
+import { GetProductsOutput, GET_PRODUCTS } from "../../apollo/home/query";
+import * as GetProducts from "../../model/product/product";
 
 function useProducts() {
-  const [products, setProducts] = useState<any[]>([]);
+  const [products, setProducts] = useState<GetProducts.Product[]>([]);
 
-  const { loading, error } = useQuery(CREATE, {
-    onCompleted: (res) => {
-      setProducts(res);
-    },
-    onError: (err) => {
-      alert(err);
+  const { loading, error } = useQuery(GET_PRODUCTS, {
+    onCompleted: (data) => {
+      if (!data.getProducts || !data.getProducts.products) {
+        return;
+      }
+      const output: GetProductsOutput = data;
+
+      setProducts(output.getProducts.products);
     },
   });
 

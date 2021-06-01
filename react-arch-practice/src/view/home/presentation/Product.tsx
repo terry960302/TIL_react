@@ -1,5 +1,5 @@
 import React from "react";
-import * as StyledProduct from "./Product.styled";
+import styled from "styled-components";
 
 type Props = {
   product: any;
@@ -7,10 +7,15 @@ type Props = {
 
 function Product({ product }: Props) {
   return (
-    <StyledProduct.ProductWrapper>
+    <ProductWrapper>
       <div>{product}</div>
-    </StyledProduct.ProductWrapper>
+    </ProductWrapper>
   );
 }
 
 export default Product;
+
+const ProductWrapper = styled.div`
+  width: 300px;
+  height: 400px;
+`;
